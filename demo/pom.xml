@@ -42,7 +42,7 @@
                         </goals>
                         <configuration>
                             <!-- Suffix version with -SNAPSHOT //-->
-                            <updatePomWithNextSemanticVersionSuffixSnapshot>true</updatePomWithNextSemanticVersionSuffixSnapshot>
+<!--                            <updatePomWithNextSemanticVersionSuffixSnapshot>true</updatePomWithNextSemanticVersionSuffixSnapshot>-->
 
                             <!-- Regexp patterns used to identify next version can optionally be adjusted //-->
                             <semanticMajorVersionPattern>^[Bb]reaking</semanticMajorVersionPattern>
