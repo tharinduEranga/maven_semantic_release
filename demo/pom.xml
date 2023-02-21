@@ -41,13 +41,33 @@
                             <goal>semantic-version</goal>
                         </goals>
                         <configuration>
-                            <!-- Suffix version with -SNAPSHOT //-->
-<!--                            <updatePomWithNextSemanticVersionSuffixSnapshot>true</updatePomWithNextSemanticVersionSuffixSnapshot>-->
+                            <javascriptHelper>
+                                <![CDATA[
+Handlebars.registerHelper('startsWith', function(messageTitle, options) {
+  const s = options.hash['s']
+  if (new RegExp('^' + s + '.*').test(messageTitle)) {
+    return options.fn(this);
+  } else {
+    return options.inverse(this);
+  }
+});
 
-                            <!-- Regexp patterns used to identify next version can optionally be adjusted //-->
-                            <semanticMajorVersionPattern>^[Bb]reaking</semanticMajorVersionPattern>
-                            <semanticMinorVersionPattern>[Ff]eature</semanticMinorVersionPattern>
-                            <semanticPatchVersionPattern>[Ff]ix</semanticPatchVersionPattern>
+Handlebars.registerHelper('firstLetters', function(from, options) {
+  const num = parseInt(options.hash['number'])
+  return from.substring(0,num)
+});
+]]>
+                            </javascriptHelper>
+                            <templateContent>
+                                <![CDATA[
+{{#commits}}
+  {{#startsWith messageTitle s='Removing'}}
+    Starts with Removing: "{{messageTitle}}"
+    first 10 letters of hash is: {{firstLetters hash number='10'}}
+  {{/startsWith}}
+{{/commits}}
+]]>
+                            </templateContent>
                         </configuration>
                     </execution>
                 </executions>
