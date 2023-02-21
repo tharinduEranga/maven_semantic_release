@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/tharinduEranga/maven_semantic_release/compare/v0.1.0...v0.1.1) (2023-02-21)
+
+
+### Bug Fixes
+
+* remove app2 ([1737c8f](https://github.com/tharinduEranga/maven_semantic_release/commit/1737c8fd61159a544602166852077231fd0c98bc))
+
 ## [0.1.0](https://github.com/tharinduEranga/maven_semantic_release/compare/v0.0.4...v0.1.0) (2023-02-21)
 
 
