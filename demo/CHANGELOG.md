@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/tharinduEranga/maven_semantic_release/compare/v0.0.4...v0.1.0) (2023-02-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* `extends` key in config file is now used for extending other config files
+
+### Features
+
+* allow provided config object to extend other configs ([e5856d0](https://github.com/tharinduEranga/maven_semantic_release/commit/e5856d04635748fc0596bb39af78c9ac41390739))
+
 ### [0.0.4](https://github.com/tharinduEranga/maven_semantic_release/compare/v0.0.3...v0.0.4) (2023-02-21)
 
 
