@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>demo</artifactId>
-    <version>1.0.0</version>
+    <version>0.0.1</version>
     <name>java-maven-standard-version-sample</name>
     <description>Java Maven Standard Version Sample</description>
     <properties>
