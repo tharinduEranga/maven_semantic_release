@@ -12,6 +12,7 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <changelog.version>1.95.5</changelog.version>
     </properties>
 
     <dependencies>
@@ -29,6 +30,30 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version>
+            </plugin>
+
+            <plugin>
+                <groupId>se.bjurr.gitchangelog</groupId>
+                <artifactId>git-changelog-maven-plugin</artifactId>
+                <version>${changelog.version}</version>
+                <executions>
+                    <execution>
+                        <id>GenerateGitChangelog</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>semantic-version</goal>
+                        </goals>
+                        <configuration>
+                            <!-- Suffix version with -SNAPSHOT //-->
+                            <updatePomWithNextSemanticVersionSuffixSnapshot>true</updatePomWithNextSemanticVersionSuffixSnapshot>
+
+                            <!-- Regexp patterns used to identify next version can optionally be adjusted //-->
+                            <semanticMajorVersionPattern>^[Bb]reaking</semanticMajorVersionPattern>
+                            <semanticMinorVersionPattern>[Ff]eature</semanticMinorVersionPattern>
+                            <semanticPatchVersionPattern>[Ff]ix</semanticPatchVersionPattern>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
