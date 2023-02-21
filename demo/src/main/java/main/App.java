@@ -5,4 +5,7 @@ public class App {
         System.out.println("Hello java");
     }
 
+    public static void x() {
+        System.out.println("next");
+    }
 }
