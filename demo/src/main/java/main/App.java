@@ -5,7 +5,4 @@ public class App {
         System.out.println("Hello java");
     }
 
-    public static void test() {
-        System.out.println("Demo");
-    }
 }
