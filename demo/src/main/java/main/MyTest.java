@@ -5,7 +5,4 @@ public class MyTest {
         System.out.println("Test");
     }
 
-    public static void test() {
-        System.out.println("Regex");
-    }
 }
